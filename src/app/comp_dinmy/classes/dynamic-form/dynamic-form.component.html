@@ -1,0 +1,4 @@
+<p *ngFor='let input of settingsForm.settingInputs'>
+    <input [type]="input.type" [placeholder]="input.name" [readonly]='input.readonly' [(ngModel)]='settingsForm.obj[input.name]' >
+</p>
+<button type="button" class="btn btn-dark" (click)="output($event)" >login</button>

@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="login">login</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+    </div>
+  </div>
+</nav>
+<div class=" d-flex justify-content-center">
+  <div class="row" style="border: 1px solid rgb(207, 206, 195); width: 800px; height: 500px;">
+    <div class="col-5">
+      <img style="width: 280px; height: 350px; margin: 20px; margin-top: 70px;"
+        src="https://images.agromassidayu.com/img/novosti-i-obshestvo/55/kto-sozdatel-quotmajkrosoftaquot-bill-gejts-i-pol-allen-sozdateli-kompanii-quotmajkrosoftquot-istoriya_1.jpg"
+        class="card-img-top" alt="">
+    </div>
+    <div class="col-6">
+      <ul class="nav nav-pills my-5" id="pills-tab" role="tablist">
+        <li class="nav-item">
+          <button class="btn btn-primary btn-lg" type="button" class="btn btn-primary"
+            (click)="clickIntern()">Intern</button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-primary btn-lg" type="button" class="btn btn-primary"
+            (click)="click()">Supervisors</button>
+        </li>
+
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <div *ngIf="level">
+          <div>
+            <h1 style="margin-top: 40px;">Hello Intern</h1>
+            <br>
+            <p>This is the place for you to perform all the operations in your account please register</p>
+            <br>
+            <button class="btn btn-primary btn-lg" type="button" class="btn btn-primary" routerLink="/welcome">REGISTER
+              NOW</button>
+          </div>
+        </div>
+        <div *ngIf="!level">
+          <div >
+            <h1 style="margin-top: 40px;">Hello Supervisor</h1>
+            <br>
+            <p>We have built for you a place where you can perform all the actions you need for your students</p>
+            <br>
+            <button class="btn btn-primary btn-lg" type="button" class="btn btn-primary" routerLink="/welcome">PLEASE START</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

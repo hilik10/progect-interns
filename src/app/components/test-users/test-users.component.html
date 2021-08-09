@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="my-3">
+    <app-upload-form></app-upload-form>
+  </div>
+
+
+<!-- עד כאן -->
+    <ul
+      class="list-group list-group-flush"
+      *ngFor="let nameuser of usersname" > 
+      <li class="list-group-item">
+
+        <button type="button" class="btn btn-primary"  
+        (click)="getAnswer(nameuser._id)">{{nameuser.name}}</button>
+      </li> 
+      </ul>
+      <ul class="list-group list-group-flush"
+      *ngFor="let file of fileUploads" > 
+      <app-intern-upload  [fileUpload]='file'></app-intern-upload>
+      </ul>
+</div>

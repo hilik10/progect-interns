@@ -1,0 +1,15 @@
+
+<div>
+    <h1>Hi {{name}} </h1> <h4>type the mobile verification code you received.</h4> 
+     <br>
+   
+</div>
+<input [(ngModel)]="input1" class="input" type="string" maxlength="1"
+    (keyup)="onDigitInput($event)" />
+<input [(ngModel)]="input2" class="input" type="string" maxlength="1"
+    (keyup)="onDigitInput($event)" />
+<input [(ngModel)]="input3" class="input" type="string" maxlength="1"
+    (keyup)="onDigitInput($event)" />
+<input [(ngModel)]="input4" class="input" type="string" maxlength="1"
+    (keyup)="onDigitInput($event)" />
+<button class="btn btn-primary" (click)="onSubmit()">Continue</button>

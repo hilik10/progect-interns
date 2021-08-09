@@ -1,0 +1,24 @@
+<form [formGroup]='loginRegister' class="row g-3 needs-validation" (ngSubmit)="onSubmitForm()" novalidate>
+    <div class="col-md-3">
+        <label for="validationCustom01" class="form-label">name</label>
+        <input type="text" class="form-control" id="validationCustom01" value="Otto" required formControlName="name">
+
+        <div class="valid-feedback">
+            Looks good!
+        </div> 
+    </div>
+    <div class="col-md-4">
+        <label for="validationCustom04" class="form-label"> password</label>
+        <input type="password" class="form-control" id="validationCustom04" value="Mark" required formControlName="password">
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+   
+
+   
+
+    <div class="col-12">
+        <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+</form>
